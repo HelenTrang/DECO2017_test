@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<head>
+  <!--responsive mobile design-->
+  <!--<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+  <!--default navigation bar-->
+  <div id="navigation">
+    <a href="#taskBar"><img id="taskIcon" src="img/taskIcon.png"></a>
+    <a href="#music"><img id="musicIcon" src="img/musicIcon.png"></a>
+    <a href="#stopwatch"><img id="timerIcon" src="img/timerIcon.png"></a>
+    <a href="#dictionary"><img id="dictionaryIcon" src="img/dictionaryIcon.png"></a>
+  </div>
+
+  <!--naviigation bar when an icon is selected-->
+  <div id="navigationSelected">
+    <a href="#taskBar"><img id="taskIconSelected" src="img/taskIconSelected.png"></a>
+    <a href="#music"><img id="musicIconSelected" src="img/musicIconSelected.png"></a>
+    <a href="#stopwatch"><img id="timerIconSelected" src="img/timerIconSelected.png"></a>
+    <a href="#dictionary"><img id="dictionaryIconSelected" src="img/dictionaryIconSelected.png"></a>
+  </div>
+
+
+  <!--the home page-->
+  <div class="sections" id="home">
+    <h1 class="heading">Helen's <br> Studbud</h1>
+    <div class="blueRectangle" id="homepage"></div>
+    <img src="img/homepageAvatar.png">
+
+    <a href="#taskBar">
+      <div id="taskListShortcut">
+        <div id="priorityColour"></div>
+        <p>Remember to do DECO2017 A3: Web Prototype T_T</p>
+      </div>
+    </a>
+  </div>
+
+  <!--TASK LIST-->
+  <div class="sections" id="taskBar">
+
+    <h1>Task List</h1>
+
+    <div id="addTask">
+
+      <!--hide button to hide the taskform-->
+      <button id="addTaskButton" class="buttonHover" onclick="hideAddTask()"><img src="img/addTaskIcon.png"></button>
+
+      <!--task list-->
+      <form id="taskform" style="display:none">
+        <label for="task">Task:</label>
+        <!--I tried adding a 'required' attribute but it does not work-->
+        <input type="text" name="task" id="taskInput" required> <br>
+        <!--date input-->
+        <label for="dueDate">Due Date</label>
+        <input type="date" name="dueDate" id="dueDateInput" required>
+        <br>
+        <!--time input-->
+        <label for="completionTime">Completion Time:</label>
+        <input type="time" name="completionTime" id="completionTimeInput">
+
+        <br>
+        <label for="estimatedTime">Estimated completion time (in mins):</label>
+        <input type="number" name="estimatedTime" id="estimatedTimeInput">
+        <!--priority-->
+        <br>
+        <label for="priority">Task Priority:</label>
+        <select name="priority" id="priorityInput" required>
+          <option value="">Select one</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <br>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+
+
+
+    </div>
+
+  </div>
+
+  <!--aesthetics-->
+  <div class="blueRectangle" id="taskRectangle"></div>
+
+  <ul id="tasklist"></ul>
+
+  </div>
+
+
+
+  <div class="sections" id="music">
+    <!--get rid of music h1 title because music player is intuitive and straightforward-->
+    <!--<h1 class="heading">Music</h1> -->
+
+    <!--SINGLE TRACK music player-->
+    <!--add personal list of music later-->
+    <!--code reference to https://elfsight.com/-->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-028429da-85aa-479e-ace5-46a9fccb7210" id="musicPlayer"></div>
+  </div>
+
+  <div class="sections" id="stopwatch">
+
+    <!--STOPWATCH-->
+    <div class="stopwatch">
+
+      <!--top buttons to switch modes between stopwatch and pomodoro-->
+      <div id="buttons">
+        <button id="stopwatch">
+          <p>stopwatch</p>
+        </button>
+        <button onclick="hideTime()" id="work">
+          <p>work</p>
+        </button>
+        <button onclick="hideTime()" id="shortBreak">
+          <p>short break</p>
+        </button>
+        <button onclick="hideTime()" id="longBreak">
+          <p>long break</p>
+        </button>
+        <button id="stop">
+          <p>stop</p>
+        </button>
+      </div>
+
+      <!--buttons for stopwatch-->
+      <div class="controls">
+        <button class="buttonPlay">
+          <!--play button-->
+          <img class="buttonHover" id="playButton" src="img/play.png" />
+          <!--pause button-->
+          <img class="buttonHover" id="pauseButton" src="img/pause.png" />
+        </button>
+        <!--reset button-->
+        <button class="buttonReset">
+          <img class="buttonHover" id="resetButton" src="img/replay.png" />
+        </button>
+      </div>
+
+      <!--stopwatch time-->
+      <div class="time" id="display">00:00:00</div>
+
+      <!--pomodoro time-->
+      <!--I can't get it to display the time when mode is switched-->
+      <div id="pomodoro-app">
+        <div id="time">
+          <div class="time" id="minutes">25</div>
+          <div class="time" id="colon">:</div>
+          <div class="time" id="seconds">00</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sections" id="acronym">
+    <!--I decided to use acronym instead of dictionary because my dictionary function is overshadowed by Google's search function. Instead, I decided to use acronym as highschool students will always try to remember content, especially in subjects like English.-->
+
+    <h1>Acronym Creator</h1>
+    <p>
+      <input type="text" id="phrase" placeholder="type your sentence here" />
+      <input type="button" onclick="makeAcronym()" id="clicker" value="GO!" />
+    </p>
+    <p id="result"></p>
+
+    <script src="js/script.js"></script>
+    <script src="/server.js"></script>
+</body>

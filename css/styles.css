@@ -1,0 +1,554 @@
+/*the general assets*/
+.sections {
+    padding: 100px;
+    height: 600px;
+    display: block;
+    position: relative;
+}
+
+h1,
+p,
+label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    color: rgb(44, 44, 44);
+}
+
+h1 {
+    font-size: 80px;
+    margin-left: 20px;
+}
+
+
+
+.blueRectangle {
+    background-color: #42baff;
+    z-index: -1;
+}
+
+#navigation,
+#navigationSelected {
+    float: right;
+    right: 20px;
+    z-index: 2;
+    position: fixed;
+
+}
+
+#navigationSelected {
+    z-index: 1;
+}
+
+
+
+#taskIcon,
+#musicIcon,
+#timerIcon,
+#dictionaryIcon {
+    width: 80px;
+    margin: 5px;
+}
+
+#taskIcon:hover,
+#musicIcon:hover,
+#timerIcon:hover,
+#dictionaryIcon:hover {
+    opacity: 0;
+}
+
+
+#taskIconSelected,
+#musicIconSelected,
+#timerIconSelected,
+#dictionaryIconSelected {
+    width: 80px;
+    margin: 5px;
+}
+
+
+/*homepage*/
+
+#homepage {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
+#home h1 {
+    color: white;
+    position: absolute;
+    top: 110px;
+    left: 130px;
+}
+
+#home img {
+    width: 650px;
+    float: right;
+}
+
+#taskListShortcut {
+    background-color: white;
+    opacity: 0.7;
+    width: 500px;
+    height: 60px;
+    position: absolute;
+    bottom: 325px;
+    display: block;
+    margin-left: 50px;
+    border-radius: 20px;
+}
+
+#taskListShortcut p {
+    margin-left: 20px;
+    position: relative;
+    bottom: 0px;
+}
+
+
+#taskListShortcut:hover {
+    color: white;
+    opacity: 0.9;
+}
+
+/*
+
+
+
+/*task form*/
+
+#taskBar h1 {
+    color: #42baff;
+    margin-left: 0px;
+}
+
+#taskform input,
+button {
+    margin: 10px;
+}
+
+#taskBar div {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+
+#taskRectangle {
+    width: 800px;
+    height: 900px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 800px;
+}
+
+
+#addTask img {
+    width: 250px;
+    display: block;
+    position: relative;
+    top: 200px;
+    left: 200px;
+}
+
+
+#taskform {
+    position: absolute;
+    left: 100px;
+    bottom: 30px;
+    color: white;
+    text-align: center;
+}
+
+#taskform input,
+select {
+    border-radius: 20px;
+    border: 0;
+    height: 25px;
+    padding: 5px;
+
+}
+
+/*submit button*/
+#submit {
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100px;
+    margin: 10px;
+
+}
+
+#taskBar ul {
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    background-color: rgb(235, 235, 235);
+    width: 500px;
+    height: 450px;
+    border-radius: 25px;
+}
+
+#tasklist {
+    position: relative;
+    left: 100px;
+    bottom: 500px;
+}
+
+/*KANBAN BOARD*/
+
+
+/*music player*/
+
+#music h1 {
+    color: #42baff;
+}
+
+#musicPlayer {
+    margin-top: 170px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*stopwatch*/
+#stopwatch {
+    background-color: #42baff;
+
+}
+
+
+#stopwatch h1 {
+    color: white;
+}
+
+.stopwatch {
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 23px;
+    width: 100%;
+    padding-top: 25px;
+}
+
+.time {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-size: 250px;
+    color: white;
+    margin-top: 100px;
+}
+
+#display {
+    bottom: 110px;
+    position: relative;
+    margin: auto;
+    display: "block";
+}
+
+/*the play and reset button*/
+.controls {
+    display: block;
+    position: relative;
+    margin: auto;
+    bottom: -300px;
+}
+
+.buttonHover:hover {
+    transform: scale(1.1);
+}
+
+.controls img {
+    width: 100px;
+}
+
+#buttons p {
+    color: white;
+    padding: 10px;
+}
+
+#buttons p:hover {
+    /*font-weight: bold;*/
+    background-color: white;
+    width: 100px;
+    border-radius: 10px;
+    opacity: 0.7;
+    color: black;
+
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+    outline: none;
+}
+
+#playButton {
+    display: block;
+}
+
+#pauseButton {
+    display: none;
+}
+
+#timing {
+    display: block;
+}
+
+#time div {
+    display: inline;
+}
+
+#time {
+    display: none;
+}
+
+/*acronym creator*/
+
+#acronym h1 {
+    color: #42baff;
+}
+
+
+#acronnym p {
+    display: block;
+    position: relative;
+    font-size: 30px;
+}
+
+#acronym input {
+    margin: 10px;
+
+}
+
+
+#phrase {
+    width: 500px;
+    height: 30px;
+}
+
+#phrase:hover {
+    outline-color: #42baff;
+}
+
+#clicker {
+    height: 30px;
+    border-radius: 30px;
+    background-color: #42baff;
+    color: white;
+    height: 50px;
+    width: 70px;
+}
+
+/*I made it big so the user's focus is on their result rather than the tsk itself, prevents distraction*/
+#result {
+    font-size: 100px;
+    opacity: 0.3;
+}
+
+
+@media only screen and (max-width: 380px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    /* home page */
+    .sections {
+        padding: 5px;
+        height: 800px;
+        display: block;
+
+    }
+
+    #navigation,
+    #navigationSelected {
+        position: fixed;
+        left: 0;
+        width: 300px;
+        margin: auto;
+        display: flex;
+    }
+
+    #taskIcon,
+    #musicIcon,
+    #timerIcon,
+    #dictionaryIcon,
+    #taskIconSelected,
+    #musicIconSelected,
+    #timerIconSelected,
+    #dictionaryIconSelected {
+        width: 70px;
+        margin: 5px;
+    }
+
+    #home h1 {
+        color: white;
+        position: absolute;
+        top: 100px;
+        left: 10px;
+        z-index: 1;
+    }
+
+    #homepage {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+    }
+
+    #home img {
+        width: 700px;
+        position: absolute;
+        left: -80px;
+        bottom: 0;
+        float: left;
+        z-index: 0;
+    }
+
+    #taskListShortcut {
+        position: absolute;
+        bottom: 325px;
+        left: 50px;
+        display: block;
+        width: 250px;
+        margin: auto;
+        border-radius: 30px;
+        z-index: 1;
+    }
+
+    #taskListShortcut p {
+        font-size: 13px;
+    }
+
+    /*inresponsive because you can't hover on the phone*/
+    #taskListShortcut:hover {
+        color: white;
+        opacity: 0.95;
+    }
+
+    #taskBar h1 {
+        color: white;
+        position: relative;
+        left: 30px;
+        width: 100px;
+    }
+
+
+    #taskRectangle {
+        width: 250px;
+        height: 60%;
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 800px;
+    }
+
+
+
+    #addTask img {
+        width: 250px;
+    }
+
+    /*I moved it to the right so that the user knows adding tasks is not the focus. It's also on an offset to drive user's attention towards their task.*/
+    #addTaskButton {
+        right: 200px;
+        position: relative;
+    }
+
+
+    #taskform {
+        position: relative;
+        left: -70px;
+        bottom: -200px;
+        color: rgb(64, 64, 64);
+        text-align: center;
+
+
+    }
+
+    #taskform input,
+    select {
+        border-radius: 20px;
+        border: 1px solid rgb(181, 181, 181);
+        height: 25px;
+        padding: 5px;
+
+    }
+
+    #tasklist {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1;
+    }
+
+    #submit {
+        background-color: #42baff;
+        color: white;
+        font-weight: bold;
+        width: 70px;
+        letter-spacing: 0.3px;
+    }
+
+    /*stopwatch/pomodoro*/
+    .stopwatch {
+        padding-top: 250px;
+    }
+
+    #buttons {
+        position: absolute;
+        top: 150px;
+        width: 300px;
+        margin: auto;
+        text-align: center;
+        left: 30px;
+    }
+
+    #buttons p{
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    .time {
+        font-size: 120px;
+    }
+
+    #display {
+        position: inherit;
+        position: relative;
+        left: -190px;
+    }
+
+    .controls {
+        bottom: -200px;
+        right: 80px;
+    }
+
+    #acronym h1{
+        position:relative;
+        top: 100px;
+    }
+    #acronym p{
+        position:relative;
+        top: 100px;
+    }
+
+    #acronym input{
+        width: 300px;
+    }
+
+
+
+
+}
